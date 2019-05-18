@@ -16,12 +16,10 @@ def apples(n,trees):
   	t_max = 0
   	left, right = None, None
 
-  	while index < len(trees)-(2*n):
+  	while index <= len(trees)-(2*n):
 	  	l_max = max(l_max, sum(trees[index:index+n]))
 	  	t_max = max(t_max, l_max + sum(trees[index+n:index+(2*n)]))
 	  	index += 1
-
-	t_max = max(t_max, l_max + sum(trees[index+n:index+(2*n)]))
 
 	return t_max
 
