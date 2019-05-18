@@ -11,10 +11,7 @@
 def apples(n,trees):
 	if not len(trees) >= 2*n:
 		return ("Error: not enough trees.")
-	index = 0
-  	l_max = 0
-  	t_max = 0
-  	left, right = None, None
+	index = l_max = t_max = 0
 
   	while index <= len(trees)-(2*n):
 	  	l_max = max(l_max, sum(trees[index:index+n]))
